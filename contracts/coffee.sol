@@ -12,26 +12,19 @@ contract Coffee{
     }
 
     Memo[] memos;
-    string public status;
-
-
-    address payable owner;
-
+    address payable owner; //owner is going to receive funds
     constructor(){
         owner = payable(msg.sender);
     }
 
-    function buyCoffee(string calldata name, string calldata message) external payable {
-        require(msg.value > 0, "Pay more than 0 ether please");
+    function buyCoffee(string calldata name,string calldata message) external payable{
+        require(msg.value>0,"Please pay more than 0 ether");
         owner.transfer(msg.value);
-        memos.push(Memo(name, message, block.timestamp, msg.sender));
+        memos.push(Memo(name,message,block.timestamp,msg.sender));
     }
 
     function getMemos() public view returns(Memo[] memory){
-        return  memos;
-    }
-
-    function launch() public {
-        status = "lift-off";
+        return memos;
     }
 }
+
