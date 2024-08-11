@@ -4,6 +4,7 @@ import { ethers } from "ethers";
 import './App.css'
 import Memos from './components/Memos';
 import Buy from './components/Buy';
+import Navbar from './components/Navbar';
 
 function App() {
   const [state, setState] = useState({
@@ -45,7 +46,6 @@ function App() {
           contractABI,
           signer
         )
-        console.log(contract)
         
         setState({ provider, signer, contract });
 
@@ -60,11 +60,13 @@ function App() {
   }, [])
 
   return (
-    <div className='App'>
+    <html data-theme="" className='App'>
+      <Navbar state={state} />
       Connected account: {account}
+
       <Buy state={state} />
       <Memos state={state} />
-    </div>
+    </html>
   )
 }
 
