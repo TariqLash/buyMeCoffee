@@ -22,9 +22,9 @@ const Buy = ({ state }) => {
 
   return (
     <div className='flex justify-center'>
-      <form onSubmit={buyCoffee} className='flex flex-col justify-around items-center p-5 m-5 rounded-lg bg-primary-content buyCoffeeForm'>
+      <form onSubmit={buyCoffee} className='card justify-around items-center pb-5 px-5 my-5 rounded-lg bg-primary-content buyCoffeeForm'>
         <img src={coffeeIcon} alt="" className='w-44'/>
-        <input type="text" placeholder="Name" id='name' className="input input-bordered w-full h-16 mb-2 max-w-xs" />
+        <input type="text" placeholder="Name" id='name' maxlength="35" className="input input-bordered w-full h-16 mb-2 max-w-xs" />
         <input type="text" placeholder="Message" id='message' className="input input-bordered w-full h-16 mb-2 max-w-xs" />
         <button type='submit' className="btn w-full h-12 max-w-x submitButton">Button</button>
       </form>

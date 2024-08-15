@@ -24,15 +24,15 @@ function App() {
       try {
 
         const { ethereum } = window;
-        
+
         // changes account instantly instead of needing a reload
         window.ethereum.on("accountsChanged", () => {
           window.location.reload()
         })
-        
+
         // read the Blockchain
         const provider = new ethers.providers.Web3Provider(ethereum);
-        
+
         //write the blockchain
         const signer = provider.getSigner();
 
@@ -46,7 +46,7 @@ function App() {
           contractABI,
           signer
         )
-        
+
         setState({ provider, signer, contract });
 
       } catch (error) {
@@ -61,11 +61,13 @@ function App() {
 
   return (
     <html data-theme="" className='App'>
-      <Navbar state={state} />
-      Connected account: {account}
+      <body className='p-3'>
+        <Navbar state={state} />
+        <div className='flex items-center mt-8 justify-center'>Connected account:<span className='font-bold text-xl mx-3'>{account}</span></div>
+        <Buy state={state} />
+        <Memos state={state} />
+      </body>
 
-      <Buy state={state} />
-      <Memos state={state} />
     </html>
   )
 }

@@ -9,7 +9,6 @@
 } */
 
 body{
-  height: 100vh;
 }
 
 .buyCoffeeForm{
@@ -18,4 +17,9 @@ body{
 
 .submitButton{
   width: 8rem;
+}
+
+.memo{
+  width: 90%;
+  max-width: 50rem;
 }
