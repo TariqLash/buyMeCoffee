@@ -1,13 +1,14 @@
-# Sample Hardhat Project
+# Buy Me a Coffee :)
 
-This project demonstrates a basic Hardhat use case. It comes with a sample contract, a test for that contract, and a Hardhat Ignition module that deploys that contract.
+Allows the user to send 0.01 Sepolia ether to me along with a message. 
 
-Try running some of the following tasks:
+## Description
 
-```shell
-npx hardhat help
-npx hardhat test
-REPORT_GAS=true npx hardhat test
-npx hardhat node
-npx hardhat ignition deploy ./ignition/modules/Lock.js
-```
+**buyMeCoffee** is a sleek web3 dApp built with React that enables users to send 0.01 Sepolia Ether along with a personalized message. This project showcases seamless blockchain integration, providing a straightforward way for supporters to contribute and engage through decentralized technology.
+
+### Dependencies
+
+React, Ethers, TailwindCSS, DaisyUI
+
+### Demo
+
